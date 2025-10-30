@@ -2,7 +2,7 @@
 
 A Chrome extension that extracts dominant colors from any webpage and allows you to copy hex codes with a single click.
 
-![Palette Peek](example%20(1).png)
+![Palette Peek](example.png)
 
 ## Features
 
