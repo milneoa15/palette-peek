@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Palette Peek Settings</title>
+    <link rel="stylesheet" href="../styles/shared.css" />
+    <link rel="stylesheet" href="./options.css" />
+  </head>
+  <body>
+    <main class="options">
+      <header class="options__header">
+        <h1>Palette Peek Settings</h1>
+        <p>Tune how many dominant colors appear when you open the popup.</p>
+      </header>
+
+      <form id="options-form" class="options__form">
+        <input
+          id="color-range"
+          type="range"
+          min="3"
+          max="50"
+          step="1"
+          value="10"
+          aria-describedby="range-helper"
+        />
+
+        <div class="number-field">
+          <label for="color-input">Manual entry</label>
+          <input id="color-input" type="number" min="3" max="50" step="1" value="10" />
+        </div>
+
+        <p class="helper" id="range-helper">Choose a value between 3 and 50 colors.</p>
+      </form>
+
+      <p id="save-status" class="status" role="status" aria-live="polite" hidden></p>
+    </main>
+
+    <script type="module" src="./options.js"></script>
+  </body>
+</html>

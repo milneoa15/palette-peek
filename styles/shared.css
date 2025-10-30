@@ -1,0 +1,34 @@
+:root {
+  --font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --background: #0f172a;
+  --surface: #111827;
+  --surface-alt: #1e293b;
+  --accent: #38bdf8;
+  --border-radius: 12px;
+  --swatch-size: 120px;
+  --transition: 150ms ease;
+  --text-primary: #f8fafc;
+  --text-secondary: #e2e8f0;
+  --danger: #ef4444;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  background: var(--background);
+  margin: 0;
+}
+
+button {
+  font: inherit;
+}
+
+[hidden] {
+  display: none !important;
+}

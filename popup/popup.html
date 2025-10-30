@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Palette Peek</title>
+    <link rel="stylesheet" href="../styles/shared.css" />
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <div class="popup" role="application">
+      <header class="popup__header">
+        <h1 class="popup__title">Palette Peek</h1>
+        <div class="popup__actions">
+          <button id="refresh-button" class="icon-button" type="button" title="Refresh palette">
+            <span class="sr-only">Refresh palette</span>
+            <span aria-hidden="true">↻</span>
+          </button>
+          <button id="options-button" class="icon-button" type="button" title="Open settings">
+            <span class="sr-only">Open settings</span>
+            <span aria-hidden="true">⚙</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="popup__body">
+        <section id="loading-state" class="state state--loading" aria-live="polite">
+          <div class="spinner" role="presentation"></div>
+          <p>Scanning colors&hellip;</p>
+        </section>
+
+        <section id="error-state" class="state state--error" hidden aria-live="assertive">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 5a1 1 0 0 1 .99.86l.01.12v6a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1Zm0 10a1.45 1.45 0 1 1-1.45 1.44A1.45 1.45 0 0 1 12 17Z"
+              fill="currentColor"
+            />
+          </svg>
+          <p id="error-message">We couldn't build a palette on this page.</p>
+          <button id="retry-button" class="state__action" type="button">Try again</button>
+        </section>
+
+        <section id="palette-section" class="palette is-hidden" aria-live="polite"></section>
+      </main>
+
+      <footer class="popup__footer"></footer>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>
